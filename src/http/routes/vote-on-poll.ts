@@ -7,6 +7,9 @@ import { voting } from '../../utils/voting-pub-sub'
 
 export async function voteOnPoll(app: FastifyInstance) {
     app.post("/polls/:pollId/votes", async (request, reply) => {
+        reply.header("Access-Control-Allow-Origin", "*");
+        reply.header("Access-Control-Allow-Methods", "POST");
+
         const voteOnPollBody = z.object({
             pollOptionId: z.string().uuid(),
         })
