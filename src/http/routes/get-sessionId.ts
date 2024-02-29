@@ -2,8 +2,6 @@ import { FastifyInstance } from 'fastify'
 
 export async function getSessionId(app: FastifyInstance) {
     app.get("/", async (request, reply) => {
-        reply.header("Access-Control-Allow-Origin", "*");
-        reply.header("Access-Control-Allow-Methods", "GET");
         let { sessionId } = request.cookies
 
         if (sessionId) {

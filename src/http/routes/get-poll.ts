@@ -4,10 +4,7 @@ import { FastifyInstance } from 'fastify'
 import { redis } from '../../lib/redis'
 
 export async function getPoll(app: FastifyInstance) {
-    app.get("/polls/:pollId", async (request, reply) => {
-        reply.header("Access-Control-Allow-Origin", "*");
-        reply.header("Access-Control-Allow-Methods", "GET");
-        
+    app.get("/polls/:pollId", async (request, reply) => {      
         const getPollParams = z.object({
             pollId: z.string().uuid(),
         })

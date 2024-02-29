@@ -7,9 +7,6 @@ import { voting } from '../../utils/voting-pub-sub'
 
 export async function voteOnPoll(app: FastifyInstance) {
     app.post("/polls/:pollId/votes", async (request, reply) => {
-        reply.header("Access-Control-Allow-Origin", "*");
-        reply.header("Access-Control-Allow-Methods", "POST");
-
         const voteOnPollBody = z.object({
             pollOptionId: z.string().uuid(),
         })
@@ -21,7 +18,7 @@ export async function voteOnPoll(app: FastifyInstance) {
         const { pollId } = voteOnPollParams.parse(request.params)
         const { pollOptionId } = voteOnPollBody.parse(request.body)
         
-        let { sessionId } = request.cookies
+        let { sessionId } = request.cookies   
 
         if (sessionId) {
             const userPreviousVoteOnPoll = await prisma.vote.findUnique({
@@ -49,7 +46,7 @@ export async function voteOnPoll(app: FastifyInstance) {
                 }) 
                
             } else if (userPreviousVoteOnPoll) {
-                return reply.status(400).send({ message: "You already voted on this poll" })
+                return reply.status(409).send({ message: "You already voted on this poll" })
             }
         }
 
@@ -64,7 +61,7 @@ export async function voteOnPoll(app: FastifyInstance) {
             })
         }
 
-       await prisma.vote.create({
+       await prisma.vote.create({ // Creating vote
         data: {
             sessionId,
             pollId,
@@ -79,6 +76,6 @@ export async function voteOnPoll(app: FastifyInstance) {
             votes: Number(votes),
         })   
 
-        return reply.status(201).send()
+        return reply.status(201).send({message: "Your vote has been created"})
     })
 }

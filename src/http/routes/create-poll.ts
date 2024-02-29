@@ -4,9 +4,6 @@ import { FastifyInstance } from 'fastify'
 
 export async function createPoll(app: FastifyInstance) {
     app.post("/polls", async (request, reply) => {
-        reply.header("Access-Control-Allow-Origin", "*");
-        reply.header("Access-Control-Allow-Methods", "POST");
-
         const createPollBody = z.object({
             title: z.string(),
             options: z.array(z.string())
@@ -27,6 +24,6 @@ export async function createPoll(app: FastifyInstance) {
             }
         })
     
-        return reply.status(201).send({ pollId: poll.id })
+        return reply.status(201).send({ success: true, pollId: poll.id })
     })
 }
