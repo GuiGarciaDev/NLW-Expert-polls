@@ -100,24 +100,24 @@ Para rodar localmente você vai precisar do Docker para subir os bancos de dados
 2. Selecione a branch websocket
 
 3. Instale as dependencias
-   sh`
+   ```sh
    npm install
-   `
+   ```
    
 4. Rode os containers do docker
-   sh`
+   ```sh
    docker compose
-   `
+   ```
 
 5. Suba as migrations para o banco de dados
-   sh`
+    ```sh
    npx prisma migrate dev
-   `
+   ```
 
 6. E finalmente, rode o projeto com
-   sh`
+   ```sh
    npm run dev
-   `
+   ```
 
    
 
