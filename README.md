@@ -97,7 +97,12 @@ Para rodar localmente você vai precisar do Docker para subir os bancos de dados
    git clone https://github.com/GuiGarciaDev/NLW-Expert-polls.git
    ```
    
-2. Selecione a branch websocket
+2. Selecione a branch websocket e adicione um arquivo .env na root do projeto com as seguintes variáveis
+   ```sh
+   POSTGRES_PRISMA_URL="postgresql://docker:docker@localhost:5200/polls?schema=public"
+   NEXT_PUBLIC_FRONTEND_URL="http://localhost:3000/"
+   NEXT_PUBLIC_API_URL="http://localhost:3333/"
+   ```
 
 3. Instale as dependencias
    ```sh
