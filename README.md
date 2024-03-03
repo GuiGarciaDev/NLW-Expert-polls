@@ -30,24 +30,20 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#sobre-o-projeto">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#tecnologias">Built With</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#rodando-o-projeto">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#pre-requisitos">Prerequisites</a></li>
+        <li><a href="#instalacao">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#uso">Usage</a></li>
+    <li><a href="#contacto">Contact</a></li>
   </ol>
 </details>
 
@@ -60,7 +56,7 @@
 
 PollEase é basicamente um sistema de votação de enquete com funcionalidade de acompanhar a votação rem tempo real desenvolvido durante a NLW Expert da Rocketseat em fevereiro de 2024 enquanto eu acompanhava a trilha de Nodejs. Aqui o usuário pode criar enquetes com até no máximo 5 opções de resposta, compartilhar o link com seus amigos e acompanhar a votação em tempo real.
 
-É importante ressaltar que esse projeto é para fins educativos e não gera qualquer renda para mim. O objetivo aqui é me aperfeiçoar e chamar atenção na comunidade, afinal eu também estou procurando um emprego. Portanto, tanto o deploy do frontend, dessa API e do PostgreSQL na Vercel quanto o do Redis na Redislab utilizam de recursos muito limitados por serem gratuitos. 
+É importante ressaltar que esse projeto é para fins educativos e não gera qualquer renda para mim. O objetivo aqui é me aperfeiçoar e chamar atenção na comunidade, afinal eu também estou procurando um emprego. Portanto, tanto o deploy do frontend, dessa API e do PostgreSQL na Vercel quanto o do Redis na Redislab utilizam de recursos muito limitados por serem gratuitos e como estou utilizando a Vercel como host, os websockets estão desligados. 
 
 Caso haja instabilidade no servidor e você não consiga acessar, você também pode rodar o projeto localmente na sua máquina conforme explicado na seção de uso. 
 
@@ -70,7 +66,7 @@ Caso haja instabilidade no servidor e você não consiga acessar, você também 
 
 ### Tecnologias
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+As tecnologias utilizadas para desenvolver esse projeto são:
 
 #### Frontend
 * React js
@@ -93,30 +89,34 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 Caso você opte por rodar o projeto localmente na sua máquina, siga estas instruções.
 
-### Prerequisites
+Obs: Os websockets estarão disponíveis apenas nesta versão local. Para isso use somente a branch websocketlocal para rodar código.
+
+### Pré-requisitos
 
 Para rodar localmente você vai precisar do Docker para subir os bancos de dados utilizados (Redis e PostgreSQL).
   
 
-### Installation
+### Instalação
 
 1. Clone o repositório
    sh
    git clone https://github.com/GuiGarciaDev/NLW-Expert-polls.git
    
-2. Instale as dependencias
+2. Selecione a branch websocket
+
+3. Instale as dependencias
    sh
    npm install
    
-3. Rode os containers do docker
+4. Rode os containers do docker
    sh
    docker compose
 
-4. Suba as migrations para o banco de dados
+5. Suba as migrations para o banco de dados
    sh
    npx prisma migrate dev
 
-5. E finalmente, rode o projeto
+6. E finalmente, rode o projeto com
    sh
    npm run dev
 
@@ -127,19 +127,11 @@ Para rodar localmente você vai precisar do Docker para subir os bancos de dados
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Uso
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 For more examples, please refer to the [Documentation](https://example.com)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See LICENSE.txt for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,24 +143,6 @@ Distributed under the MIT License. See LICENSE.txt for more information.
 Guilherme - [@GuiGarciaDev](https://twitter.com/GuiGarciaDev) - [GuiGarciaDev](https://linkedin.com/in/GuiGarciaDev) - guilherme.garcia1136@gmail.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
