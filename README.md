@@ -93,9 +93,9 @@ Para rodar localmente você vai precisar do Docker para subir os bancos de dados
 ### Instalação
 
 1. Clone o repositório
-   sh`
+   ```sh
    git clone https://github.com/GuiGarciaDev/NLW-Expert-polls.git
-   `
+   ```
    
 2. Selecione a branch websocket
 
