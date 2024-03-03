@@ -27,17 +27,17 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Sumário</summary>
   <ol>
     <li>
-      <a href="#sobre-o-projeto">About The Project</a>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
       <ul>
-        <li><a href="#tecnologias">Built With</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
       </ul>
     </li>
-    <li><a href="#rodando-o-projeto">Getting Started</a></li>
-    <li><a href="#uso">Usage</a></li>
-    <li><a href="#contacto">Contact</a></li>
+    <li><a href="#rodando-o-projeto">Rodando o projeto</a></li>
+    <li><a href="#uso">Uso</a></li>
+    <li><a href="#contato">Contato</a></li>
   </ol>
 </details>
 
@@ -93,26 +93,31 @@ Para rodar localmente você vai precisar do Docker para subir os bancos de dados
 ### Instalação
 
 1. Clone o repositório
-   sh
+   sh`
    git clone https://github.com/GuiGarciaDev/NLW-Expert-polls.git
+   `
    
 2. Selecione a branch websocket
 
 3. Instale as dependencias
-   sh
+   sh`
    npm install
+   `
    
 4. Rode os containers do docker
-   sh
+   sh`
    docker compose
+   `
 
 5. Suba as migrations para o banco de dados
-   sh
+   sh`
    npx prisma migrate dev
+   `
 
 6. E finalmente, rode o projeto com
-   sh
+   sh`
    npm run dev
+   `
 
    
 
@@ -132,7 +137,7 @@ For more examples, please refer to the [Documentation](https://example.com)
 
 
 <!-- CONTACT -->
-## Contact
+## Contato
 
 Guilherme - [@GuiGarciaDev](https://twitter.com/GuiGarciaDev) - [GuiGarciaDev](https://linkedin.com/in/GuiGarciaDev) - guilherme.garcia1136@gmail.com
 
