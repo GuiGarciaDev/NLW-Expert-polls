@@ -20,12 +20,12 @@ app.register(cors, {
     credentials: true
 })
 
-app.register(fastifyWebsocket)
+//app.register(fastifyWebsocket)
 
 app.register(createPoll)
 app.register(getPoll)
 app.register(voteOnPoll)
-app.register(pollResults)
+//app.register(pollResults)
 app.register(getSessionId)
 
 app.listen({ port: 3333}).then(() => {
