@@ -35,13 +35,7 @@
         <li><a href="#tecnologias">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#rodando-o-projeto">Getting Started</a>
-      <ul>
-        <li><a href="#pre-requisitos">Prerequisites</a></li>
-        <li><a href="#instalacao">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#rodando-o-projeto">Getting Started</a></li>
     <li><a href="#uso">Usage</a></li>
     <li><a href="#contacto">Contact</a></li>
   </ol>
