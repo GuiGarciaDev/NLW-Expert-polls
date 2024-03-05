@@ -58,6 +58,8 @@ export async function voteOnPoll(app: FastifyInstance) {
                 maxAge: 60 * 60 * 24 * 30,
                 signed: true,
                 httpOnly: true,
+                sameSite: 'none',
+                domain: process.env.NEXT_PUBLIC_FRONTEND_URL
             })
         }
 
