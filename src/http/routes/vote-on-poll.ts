@@ -59,7 +59,7 @@ export async function voteOnPoll(app: FastifyInstance) {
                 signed: true,
                 httpOnly: true,
                 sameSite: 'none',
-                domain: process.env.NEXT_PUBLIC_FRONTEND_DOMAIN
+                domain: `.${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}`
             })
         }
 
