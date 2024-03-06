@@ -1,11 +1,6 @@
 <a name="readme-top"></a>
 
-__________________  .____    .____     ___________   _____    ____________________
-\______   \_____  \ |    |   |    |    \_   _____/  /  _  \  /   _____/\_   _____/
- |     ___//   |   \|    |   |    |     |    __)_  /  /_\  \ \_____  \  |    __)_ 
- |    |   /    |    \    |___|    |___  |        \/    |    \/        \ |        \
- |____|   \_______  /_______ \_______ \/_______  /\____|__  /_______  //_______  /
-                  \/        \/       \/        \/         \/        \/         \/ 
+
 
 
 <!-- TABLE OF CONTENTS -->
@@ -24,12 +19,10 @@ __________________  .____    .____     ___________   _____    __________________
   </ol>
 </details>
 
-
+![image](https://github.com/GuiGarciaDev/NLW-Expert-polls/assets/121461039/6976c999-256b-4e88-af86-04aa4476bcd5)
 
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 PollEase é basicamente um sistema de votação de enquete com funcionalidade de acompanhar a votação rem tempo real desenvolvido durante a NLW Expert da Rocketseat em fevereiro de 2024 enquanto eu acompanhava a trilha de Nodejs. Aqui o usuário pode criar enquetes com até no máximo 5 opções de resposta, compartilhar o link com seus amigos e acompanhar a votação em tempo real.
 
@@ -112,13 +105,96 @@ Para rodar localmente você vai precisar do Docker para subir os bancos de dados
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## API
+
+Vamos entender um pouco sobre essa simples API.
+
+### Criar enquete
+
+#### Requisição
+
+<mark>POST /polls</mark>
+
+#### Resposta
+
+```
+{
+  title: "título da enquete",
+  options ["Array com as opções"]
+}
+```
+
+Onde
+
+* title é uma string e representa o título da enquete.
+* options é um array de strings e cada elemento é uma opção de voto. (máx 5 opções)
+
+### Enquete
+
+#### Requisição
+
+<mark>GET /polls/:pollId</mark>
+
+#### Resposta
+
+```
+{
+  poll: {
+    id: "uuid",
+    title: "título",
+    options: ["opção1", "opção2", "opção3",]
+  }
+}
+```
+Onde
+
+* id e [:pollId] são o id de identificação único de cada enquete no formato de um uuid.
+
+### Votar em uma enquete
+
+#### Requisição
+
+<mark>POST /polls/:pollId/votes</mark>
+
+```
+{
+    "pollOptionId": "eef760bc-6491-48a9-9677-f077d9a5f862"
+}
+```
+
+Onde 
+
+* pollOptionId é a id única da opção que você votou.
+
+#### Resposta
+
+Vai responder uma mensagem de erro ou ok.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- USAGE EXAMPLES -->
 ## Uso
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+TEXTO PERSONALIZADO
 
-For more examples, please refer to the [Documentation](https://example.com)
+### Crie enquetes
+
+![image](https://github.com/GuiGarciaDev/NLW-Expert-polls/assets/121461039/799def54-b0d6-461b-85bc-7ac70799af63)
+
+### Compartilhe com quem quiser
+
+![image](https://github.com/GuiGarciaDev/NLW-Expert-polls/assets/121461039/2fca5880-e5b3-475a-891b-f56a7f22117d)
+
+### Vote na melhor opção
+
+![image](https://github.com/GuiGarciaDev/NLW-Expert-polls/assets/121461039/a97aa40e-bb80-4519-89c2-38972a5aae5b)
+
+
+### Acompanhe o resultado
+
+![image](https://github.com/GuiGarciaDev/NLW-Expert-polls/assets/121461039/66e366fc-b4ca-4ca3-a9df-21681331bf83)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
