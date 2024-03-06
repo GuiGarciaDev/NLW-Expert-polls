@@ -1,7 +1,6 @@
 <a name="readme-top"></a>
 
-
-
+![image](https://github.com/GuiGarciaDev/NLW-Expert-polls/assets/121461039/6976c999-256b-4e88-af86-04aa4476bcd5)
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -18,8 +17,6 @@
     <li><a href="#contato">Contato</a></li>
   </ol>
 </details>
-
-![image](https://github.com/GuiGarciaDev/NLW-Expert-polls/assets/121461039/6976c999-256b-4e88-af86-04aa4476bcd5)
 
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
