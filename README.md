@@ -187,8 +187,6 @@ Vai responder uma mensagem de erro ou ok.
 <!-- USAGE EXAMPLES -->
 ## Uso
 
-TEXTO PERSONALIZADO
-
 ### Crie enquetes
 
 ![image](https://github.com/GuiGarciaDev/NLW-Expert-polls/assets/121461039/799def54-b0d6-461b-85bc-7ac70799af63)
@@ -215,6 +213,6 @@ TEXTO PERSONALIZADO
 
 Guilherme - [@GuiGarciaDev](https://twitter.com/GuiGarciaDev) - [GuiGarciaDev](https://linkedin.com/in/GuiGarciaDev) - guilherme.garcia1136@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/GuiGarciaDev/NLW-Expert-polls](https://github.com/GuiGarciaDev/NLW-Expert-polls)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
